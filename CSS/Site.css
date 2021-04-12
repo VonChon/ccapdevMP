@@ -36,12 +36,17 @@ body{
     margin-right: 10%;
     margin-top: 40%; */
     margin: 10px;
-    width: 400%;
+    width: 100%;
 }
 
 img{
     height: 250px;
     width: 250px;
+}
+
+.items:hover{
+    border-color: rgb(162, 255, 0);
+    /* opacity: .65; */
 }
 
 .site-body{

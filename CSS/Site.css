@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: rgba(238, 237, 236, 0.966);
 }
 
 .main-page{
@@ -39,13 +40,33 @@ body{
     width: 100%;
 }
 
+.bottom-header{
+    margin-left: 20px;
+}
+
 img{
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
+}
+
+.items{
+    border: 1px solid;
+    flex: 1;
+    border-color: rgb(190, 245, 245);
+    padding: 20px;
+    background-color: rgb(255, 253, 253);
+    text-align: center;
+    margin: 10px;
+}
+
+.checked{
+    color: orange;
 }
 
 .items:hover{
+    border: 1px solid;
     border-color: rgb(162, 255, 0);
+    
     /* opacity: .65; */
 }
 
@@ -54,13 +75,10 @@ img{
     margin: auto;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .site-body > *{
     flex: 0 1 20%;
-}
-
-.items{
-    margin: 10px;
-    text-align: center;
+    
 }

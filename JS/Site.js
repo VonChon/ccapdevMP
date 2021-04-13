@@ -2,12 +2,13 @@
 function redirect(name) {
 
     switch(name){
-        case "Nike-FlyBy-Mid-2090": window.open("./Product1.html");break;
-        case "Nike-Downshifter-2090": window.open("./Product2.html");break;
-        case "Iphone12pro": window.open("./Product3.html");break;
-        case "GalaxyS21": window.open("./Product4.html");break;
-        case "UniqloMickey": window.open("./Product5.html");break;
+        case "Nike-FlyBy-Mid-2090": location.replace("./Product1.html");break;
+        case "Nike-Downshifter-2090": location.replace("./Product2.html");break;
+        case "Iphone12pro": location.replace("./Product3.html");break;
+        case "GalaxyS21": location.replace("./Product4.html");break;
+        case "UniqloMickey": location.replace("./Product5.html");break;
     }
+    
 }
 
 function search() {

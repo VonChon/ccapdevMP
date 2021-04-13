@@ -13,7 +13,8 @@ function redirect(name) {
 
 function search() {
     var item = document.getElementById("search").value;
-
+    
+    document.getElementById("bottom-header").style.display = "none";
     var prod1 = document.getElementById("FlyBy");
     var prod2 = document.getElementById("Downshifter");
     var prod3 = document.getElementById("iPhone");
@@ -106,4 +107,8 @@ function search() {
     {
         alert("Search not found!");
     }
+}
+
+function goHome(){
+    location.replace("./Site.html");
 }

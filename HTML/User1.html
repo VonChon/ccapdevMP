@@ -19,19 +19,19 @@
     <link rel="stylesheet" href="../CSS/User.css">
 </head>
 <body>
-    <script src = "../JS/Site.js"></script>
     <div class = "main-page">
         <div class = "top-header">
             <div class = "logo">
+                <a href="../HTML/Site.html">
                     <img src="../Photos/Logo.png" id = "logo">
+                </a>
             </div>
            
                 <div class="input-group">
-                    <button type="button" class="btn btn-secondary" id = "home-button" onclick="goHome();">Home</button>
-                    <!-- <input type="text" class="form-control" placeholder="Search for products and brands" name="search" id = "search">
+                    <input type="text" class="form-control" placeholder="Search for products and brands" name="search" id = "search">
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-outline-dark" onclick="search();">Search</button>
-                    </div> -->
+                    </div>
                 </div>
                 
         
@@ -42,6 +42,8 @@
                     <ul class="dropdown-menu">
                       <li><a href="../HTML/Login.html">Log Out</a></li>
                       <li><a href="User1.html">View Profile</a></li>
+                      <li><a href="Edit.html">Edit Profile</a></li>
+                      <li><a href="#">Transactions</a></li>
                       <li><a href="#">Check Cart</a></li>
                     </ul>
                   </div>
@@ -55,10 +57,10 @@
             <div class="bg-white shadow rounded overflow-hidden">
                 <div class="px-4 pt-0 pb-4 pt-5" style="background-image: url(https://images.unsplash.com/photo-1542779283-429940ce8336?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=220);">
                     <div class="media align-items-end profile-head">
-                        <div class="profile mr-3"><img src="../Photos/woah.png" width="130" class="rounded mb-2 img-thumbnail"></div>
+                        <div class="profile mr-3"><a href="../HTML/Edit.html"><img src="../Photos/woah.png" width="130" class="rounded mb-2 img-thumbnail"></a></div>
                         <div class="media-body mb-5 text-white">
                             <h3 class="mt-0 mb-0">Pikachu</h3>
-                            <p class="small mb-4"> <i class="fas fa-map-marker-alt"></i>Manila, Philippines</p>
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt">Manila, Philippines</i></p>
                         </div>
                     </div>
                 </div>

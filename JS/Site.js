@@ -82,8 +82,28 @@ function search() {
         prod3.style.display = "none";
         prod4.style.display = "none";
     }
+    else if(item === "Pikachu" || item === "pikachu")
+    {
+        window.location.href = "../HTML/User1.html";
+    }
+    else if(item === "Doggo" || item === "doggo")
+    {
+        window.location.href = "../HTML/User2.html";
+    }
+    else if(item === "Catt" || item === "catt")
+    {
+        window.location.href = "../HTML/User3.html";
+    }
+    else if(item === "Nick" || item === "nick")
+    {
+        window.location.href = "../HTML/User4.html";
+    }
+    else if(item === "Levi" || item === "levi")
+    {
+        window.location.href = "../HTML/User5.html";
+    }
     else
     {
-        alert("product could not be found!");
+        alert("Search not found!");
     }
 }

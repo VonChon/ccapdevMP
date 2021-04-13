@@ -23,7 +23,8 @@
             </div>
            
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for products, brands, and users" name="search" id = "search">
+                    <button type="button" class="btn btn-secondary" id = "home-button" onclick="goHome();">Home</button>
+                    <input type="text" class="form-control" placeholder="Search for products and brands" name="search" id = "search">
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-outline-dark" onclick="search();">Search</button>
                     </div>
@@ -36,17 +37,17 @@
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                       <li><a href="../HTML/Login.html">Log Out</a></li>
-                      <li><a href="#">View Profile</a></li>
+                      <li><a href="../HTML/User1.html">View Profile</a></li>
                       <li><a href="#">Check Cart</a></li>
                     </ul>
                   </div>
             </div>
         </div>
-        <div class = "bottom-header">
+        <div class = "bottom-header" id = "bottom-header">
             <h1>Latest Products</h1>
         </div>
         <div class="site-body">
-
+            
             <div class = "items" id = "FlyBy">
                 <img src="../Photos/Nike-FlyBy-Mid-2090.jpg" name = "Nike-FlyBy-Mid-2090" onclick="redirect(this.name);">
                 <p class = "productname"> <a href="./Product1.html">Nike Fly.By Mid</a> </p>

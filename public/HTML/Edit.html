@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile: Pikachu</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../CSS/Edit.css">
+</head>
+<body>
+    <div class = "main-page">
+        <div class = "top-header">
+            <div class = "logo">
+                <a href="../HTML/Site.html">
+                    <img src="../Photos/Logo.png" id = "logo">
+                </a>
+            </div>
+           
+                <div class="input-group">
+                    <button type="button" class="btn btn-secondary" id = "home-button" onclick="goHome();">Home</button>
+                    <!-- <input type="text" class="form-control" placeholder="Search for products and brands" name="search" id = "search">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-outline-dark" onclick="search();">Search</button>
+                    </div> -->
+                </div>
+                
+        
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Account
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="../HTML/Login.html">Log Out</a></li>
+                      <li><a href="User1.html">View Profile</a></li>
+                      <li><a href="Edit.html">Edit Profile</a></li>
+                      <li><a href="#">Transactions</a></li>
+                      <li><a href="#">Check Cart</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- start of content -->
+    <div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto">
+            <!-- Profile widget -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 pt-5" style="background-image: url(https://images.unsplash.com/photo-1542779283-429940ce8336?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=220);">
+                    <div class="media align-items-end profile-head">
+                        <div class="profile mr-3"><a href="../HTML/Edit.html"><img src="../Photos/woah.png" width="130" class="rounded mb-2 img-thumbnail"></a></div>
+                        <div class="media-body mb-5 text-white">
+                            <h3 class="mt-0 mb-0">Pikachu</h3>
+                            <p class="small mb-4"> <button type="button" class="no-style-btn-cover"><i class="fas fa-map-marker-alt">Change Cover Photo</i></button></p>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="px-4 py-3">
+                    <h5 class="pt-5">Short description</h5><br>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <p class="font-italic mb-0">Hello! I am a student and I like buying online!</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Recent comments and Feedbacks</h5>
+                    </div>
+                -->
+                <div class="px-4 py-3">
+                </div>
+                <div class="px-4 py-4">
+                    <p class="small mb-4"> <button type="button" class="no-style-btn"><i class="fas fa-map-marker-alt">Change Profile Picture</i></button></p>
+                </div>
+                    <div class="row">
+                    <!-- start of edit -->
+                        <div class="container mt-3">
+                            <span class="edit-view-text">Username</span>
+                            <input type="text" class="edit-input" value="Pikachu"></input>
+                            <hr>
+                            <div class="d-flex flex-row user-info"><span class="edit-view-text2">Short description</span>
+                                <textarea type="text" class="edit-input-area" placeholder="Hello! I am a student and I like buying online!"></textarea>
+                            </div>
+                        </div>
+                    <!-- end of edit -->
+                    </div><hr>
+                    <input type="button" class="edit-save-btn" value="Save"></input><hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

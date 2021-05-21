@@ -27,10 +27,9 @@ app.listen(port, function () {
 });
 
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('login');
 });
 
-app.get('/main', function(req, res) {
-    var path = './public/HTML/Site.html';
-    res.send(path);
+app.get('/Site.html', function(req, res) {
+    res.render('index');
 });

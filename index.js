@@ -33,3 +33,11 @@ app.get('/', function(req, res) {
 app.get('/Site.html', function(req, res) {
     res.render('index');
 });
+
+app.get('/SignUp.html', function(req, res) {
+    res.render('signup');
+});
+
+app.get('/Login.html', function(req, res) {
+    res.render('login');
+});

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile: {{name}}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../CSS/User.css">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+</head>
+<body>
+
+{{> header}}
+
+<div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto">
+            <!-- Profile widget -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 pt-5" style="background-image: url(https://images.unsplash.com/photo-1542779283-429940ce8336?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=220);">
+                    <div class="media align-items-end profile-head">
+                        <div class="profile mr-3"><a href="../HTML/Edit.html"><img src="../Photos/woah.png" width="130" class="rounded mb-2 img-thumbnail"></a></div>
+                        <div class="media-body mb-5 text-white">
+                            <h3 class="mt-0 mb-0">{{name}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-3">
+                    <h5 class="pt-5">Short description</h5><br>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <p class="font-italic mb-0">{{description}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Recent comments and Feedbacks</h5>
+                    </div>
+                    <div class="row">
+                    <!-- start of comments -->
+                    <!-- end of comments -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

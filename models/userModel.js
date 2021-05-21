@@ -12,7 +12,11 @@ var UserSchema = new mongoose.Schema({
         required: true
     },
     pass: {
-        type: Number,
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
         required: true
     }
 });

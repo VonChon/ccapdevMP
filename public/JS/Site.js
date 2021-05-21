@@ -12,7 +12,8 @@ function redirect(name) {
 }
 
 function search() {
-    var item = document.getElementById("search").value;
+    var item = document.getElementById("search").value.toLowerCase();
+    
     
     document.getElementById("bottom-header").style.display = "none";
     var prod1 = document.getElementById("FlyBy");
@@ -28,13 +29,13 @@ function search() {
     prod5.style.display = "block";
 
 
-    if(item === "Nike" || item === "shoes")
+    if(item === "nike" || item === "shoes")
     {
         prod3.style.display = "none";
         prod4.style.display = "none";
         prod5.style.display = "none";
     }
-    else if(item === "phone" || item === "phones" || item === "Phone" || item === "Phones")
+    else if(item === "phone" || item === "phones")
     {
         prod1.style.display = "none";
         prod2.style.display = "none";
@@ -48,58 +49,58 @@ function search() {
         prod4.style.display = "none";
 
     }
-    else if(item === "Nike Fly.By Mid" || item === "Fly By Mid" ||item === "Nike Fly By Mid" ||item === "Nike FlyBy Mid")
+    else if(item === "nike fly.by mid")
     {
         prod5.style.display = "none";
         prod2.style.display = "none";
         prod3.style.display = "none";
         prod4.style.display = "none";
     }
-    else if(item === "Nike Downshifter" || item === "nike downshifter")
+    else if(item === "nike downshifter")
     {
         prod5.style.display = "none";
         prod1.style.display = "none";
         prod3.style.display = "none";
         prod4.style.display = "none";
     }
-    else if(item === "iPhone" || item === "IPhone" ||item === "Iphone" || item === "iphone")
+    else if(item === "iphone")
     {
         prod5.style.display = "none";
         prod2.style.display = "none";
         prod1.style.display = "none";
         prod4.style.display = "none";
     }
-    else if(item === "Samsung" || item === "samsung" ||item === "Galaxy S21" )
+    else if(item === "samsung" ||item === "Galaxy S21" )
     {
         prod5.style.display = "none";
         prod2.style.display = "none";
         prod3.style.display = "none";
         prod1.style.display = "none";
     }
-    else if(item === "Uniqlo" || item === "uniqlo")
+    else if(item === "uniqlo")
     {
         prod1.style.display = "none";
         prod2.style.display = "none";
         prod3.style.display = "none";
         prod4.style.display = "none";
     }
-    else if(item === "Pikachu" || item === "pikachu")
+    else if(item === "pikachu")
     {
         window.location.href = "../HTML/User1.html";
     }
-    else if(item === "Doggo" || item === "doggo")
+    else if(item === "doggo")
     {
         window.location.href = "../HTML/User2.html";
     }
-    else if(item === "Catt" || item === "catt")
+    else if(item === "catt")
     {
         window.location.href = "../HTML/User3.html";
     }
-    else if(item === "Nick" || item === "nick")
+    else if(item === "nick")
     {
         window.location.href = "../HTML/User4.html";
     }
-    else if(item === "Levi" || item === "levi")
+    else if(item === "levi")
     {
         window.location.href = "../HTML/User5.html";
     }

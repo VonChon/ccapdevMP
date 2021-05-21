@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Fly.By Mid</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/singleprod.css">
+</head>
+<body>
+    <script src = "../JS/Site.js"></script>
+    <div class = "main-page">
+        <div class = "top-header">
+            <div class = "logo">
+                    <img src="../Photos/Logo.png" id = "logo">
+            </div>
+           
+            <div class="input-group">
+                <button type="button" class="btn btn-secondary" id = "home-button" onclick="goHome();">Home</button>
+                <!-- <input type="text" class="form-control" placeholder="Search for products and brands" name="search" id = "search">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-outline-dark" onclick="search();">Search</button>
+                </div> -->
+            </div>
+                
+        
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Account
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="../HTML/Login.html">Log Out</a></li>
+                      <li><a href="#">View Profile</a></li>
+                      <li><a href="#">Check Cart</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product -->
+    <div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img src="../Photos/Nike-FlyBy-Mid-2090.jpg" /></div>
+						  <div class="tab-pane" id="pic-2"><img src="../Photos/flyby/front.png" /></div>
+						  <div class="tab-pane" id="pic-3"><img src="../Photos/flyby/top.png" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="../Photos/flyby/back.png" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="../Photos/flyby/sole.png" /></div>
+						</div>
+						<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../Photos/Nike-FlyBy-Mid-2090.jpg" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="../Photos/flyby/front.png" /></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><img src="../Photos/flyby/top.png" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="../Photos/flyby/back.png" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="../Photos/flyby/sole.png" /></a></li>
+						</ul>
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title">Nike Fly.By Mid</h3>
+                        <img src="../Photos/fire.png" width="35"><span class="state">HOT!</span>
+						<p class="product-description"><br>GRITTY GAME.<br><br>
+                            Players who go all out, every play, in every game deserve something special for their effort. The Nike Fly.By Mid provides court-ready cushioning, support and traction for the game's constant multi-directional movements.
+                            <br><br>Secure, Supportive Fit
+                            <br>Mid-high design with plush, foam-lined collar has a secure fit and support around your ankle.
+                            <br><br>Custom Lacing
+                            <br>Stitched-down leather overlay provides durability and side-to-side support. Multiple lace feeds in each section let you customise how you lace up.
+                            <br>Court Control
+                            <br><br>Durable rubber outsole with wavy traction pattern provides great grip on the court.
+                            </p>
+						<div class="product_meta">
+                            <span class="posted_in"> <strong>CATEGORIES:</strong> <a rel="tag" href="#">Shoes</a>, <a rel="tag" href="#">Men</a></span>
+                        </div>
+                        <h4 class="price">price: <span class="amount-old">₱2,895</span><span class="amount-new"> ₱2,090</span></h4>
+						<p class="vote">Buyers enjoyed this product!</p>
+						<!-- <h5 class="sizes">sizes:
+							<span class="size" data-toggle="tooltip" title="small">s</span>
+							<span class="size" data-toggle="tooltip" title="medium">m</span>
+							<span class="size" data-toggle="tooltip" title="large">l</span>
+							<span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+						</h5>
+						<h5 class="colors">colors:
+							<span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+							<span class="color green"></span>
+							<span class="color blue"></span>
+						</h5> -->
+						<div class="action">
+							<button class="add-to-cart btn btn-default" type="button" onclick="alert('Product added to cart!')">add to cart</button>
+						</div>
+					</div>
+                </div>
+                <div class="product-drescription">
+                    <br><p><u>Product Details</u></p>
+                    <ul>
+                        <li>Breathable mesh tongue</li>
+                        <li>Resilient foam midsole</li>
+                        <li>Tight mesh in the forefoot</li>
+                        <li>Leather and textile materials in upper</li>
+                        <li>Colour Shown: Wolf Grey/Pure Platinum/Metallic Silver/Cool Grey</li>
+                        <li>Style: CD0189-013</li>
+                        <li>Country/Region of Origin: India</li>
+                    </ul>
+                </div> 
+                <hr>
+                <hr>
+                <div class="container mt-3">
+                    <span class="commentsec"><u><strong>BUYER FEEDBACKS</strong></u></span>
+                    <div class="d-flex justify-content-left row mt-2">
+                        <div class="col-md-8">
+                            <div class="d-flex flex-column comment-section">
+                                <div class="bg-white p-2">
+                                    <div class="d-flex flex-row user-info"><img class="rounded-circle" src="../Photos/woah.png" width="40" height="40">
+                                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><a href="../HTML/User1.html">Pikachu</a></span>
+                                            <!-- EDIT AND DELETE FEEDBACK -->
+                                            <span class="date"><a href="">Edit </a><a href=""> Delete</a></span>
+                                            <span class="date text-black-50">April 2021</span></div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="comment-text"><img src="../Photos/heart.png" width="19">
+                                            I like the feel, it's so comfortable.</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- User that will create post -->
+                                <div class="bg-light p-2">
+                                    <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
+                                    <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none" type="button">Post feedback</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-5">
+                    <span class="commentsec"><u><strong>COMMENTS</strong></u></span>
+                    <div class="d-flex justify-content-left row mt-2">
+                        <div class="col-md-8">
+                            <div class="d-flex flex-column comment-section">
+                                <div class="bg-white p-2">
+                                    <div class="d-flex flex-row user-info"><img class="rounded-circle" src="../Photos/doggo.jpg" width="40" height="40">
+                                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><a href="../HTML/User2.html">Doggo</a></span>
+                                            <span class="date"><a href="">Edit </a><a href=""> Delete</a></span>
+                                            <span class="date text-black-50">April 2021</span></div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="comment-text">When will you restock?</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="bg-white p-2">
+                                    <div class="d-flex flex-row user-info"><img class="rounded-circle" src="../Photos/levi.png" width="40" height="40">
+                                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><a href="../HTML/User5.html">Levi</a></span>
+                                            <span class="date"><a href="">Edit </a><a href=""> Delete</a></span>
+                                            <span class="date text-black-50">April 2021</span></div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="comment-text">Do you have any other colors?</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- User that will create post -->
+                                <div class="bg-light p-2">
+                                    <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
+                                    <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none" type="button">Post comment</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

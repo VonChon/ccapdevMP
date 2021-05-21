@@ -4,6 +4,8 @@ const express = require('express');
 // import module `express-handlebars`
 const exphbs = require('express-handlebars');
 
+const routes = require('./routes/routes.js');
+
 const db = require('./models/db.js');
 // import module `routes` from `./routes/routes.js`
 // const routes = require('./routes/routes.js');
@@ -27,18 +29,32 @@ app.listen(port, function () {
     console.log('app listening at port ' + port);
 });
 
-app.get('/', function(req, res) {
-    res.render('login');
+// parses incoming requests with urlencoded payloads
+app.use(express.urlencoded({extended: true}));
+
+app.use('/', routes);
+
+app.use(function (req, res) {
+    res.render('error404');
 });
 
-app.get('/Site.html', function(req, res) {
-    res.render('index');
-});
+db.connect();
 
-app.get('/SignUp.html', function(req, res) {
-    res.render('signup');
-});
+// app.get('/', function(req, res) {
+//     res.render('login');
+// });
 
-app.get('/Login.html', function(req, res) {
-    res.render('login');
-});
+// app.get('/Site.html', function(req, res) {
+//     res.render('index');
+// });
+
+// app.get('/SignUp.html', function(req, res) {
+//     res.render('signup');
+// });
+// app.post('/SignUp.html', function(req, res) {
+//     res.render('signup');
+// })
+
+// app.post('/Login.html', function(req, res) {
+//     res.render('login');
+// });

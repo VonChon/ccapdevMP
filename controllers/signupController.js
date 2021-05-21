@@ -31,16 +31,14 @@ const signupController = {
             Example: the value entered in <input type="text" name="fName">
             can be retrieved using `req.body.fName`
         */
-        var fName = req.body.fName;
-        var lName = req.body.lName;
-        var idNum = req.body.idNum;
-        var pw = req.body.pw;
+        var email = req.body.email;
+        var name = req.body.name;
+        var password = req.body.password;
 
         var user = {
-            fName: fName,
-            lName: lName,
-            idNum: idNum,
-            pw: pw
+            email: email,
+            name: name,
+            password: password
         }
 
         /*
@@ -58,7 +56,7 @@ const signupController = {
                     which calls getSuccess() method
                     defined in `./successController.js`
                 */
-                res.redirect('/success?fName=' + fName +'&lName=' + lName + '&idNum=' + idNum);
+                res.render('index');
             }
         });
     }

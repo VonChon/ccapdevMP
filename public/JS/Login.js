@@ -33,7 +33,7 @@ function verify()
     console.log(password);
     if(checker === true)
     {
-        window.open("./Site.html");
+        res.render('../index');
     }
     else
     {

@@ -11,8 +11,5 @@ function check(){
     if(checker === false){
         alert('Password does not match!');
     }
-    else
-    {
-        window.open("./Site.html");
-    }
+    // else{window.open("./Site.html");}
 }

@@ -4,6 +4,7 @@ const express = require('express');
 // import module `express-handlebars`
 const exphbs = require('express-handlebars');
 
+const db = require('./models/db.js');
 // import module `routes` from `./routes/routes.js`
 // const routes = require('./routes/routes.js');
 

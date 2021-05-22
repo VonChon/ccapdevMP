@@ -23,7 +23,7 @@ const successController = {
         };
 
         // render `../views/success.hbs`
-        res.render('main', details);
+        res.render('success', details);
     }
 
 }

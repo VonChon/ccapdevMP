@@ -1,13 +1,16 @@
 // import module `mongoose`
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 // defines the schema for collection `users`
-var UserSchema = new mongoose.Schema({
-    email: {
-        type: String,
-        required: true
-    },
+const UserSchema = new Schema({
     name: {
+        type: String,
+        required: true,
+        unqiue: true
+    },
+    email: {
         type: String,
         required: true
     },
@@ -17,7 +20,10 @@ var UserSchema = new mongoose.Schema({
     },
     description: {
         type: String
-    }
+    },
+    // avatar: {
+    //     type: String 
+    // }
 });
 
 /*

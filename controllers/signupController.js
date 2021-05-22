@@ -46,8 +46,9 @@ const signupController = {
             defined in the `database` object in `../models/db.js`
             this function adds a document to collection `users`
         */
-        db.insertOne(User, user, function(flag) {
-            if(flag) {
+        db.insertOne(User, user, function(result) {
+            console.log(result);
+            if(result) {
                 /*
                     upon adding a user to the database,
                     redirects the client to `/success` using HTTP GET,
@@ -56,7 +57,8 @@ const signupController = {
                     which calls getSuccess() method
                     defined in `./successController.js`
                 */
-                res.render('index');
+                res.redirect('/success?name=' + name);
+                //res.render('index');
             }
         });
     }

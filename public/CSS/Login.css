@@ -24,6 +24,11 @@ body{
     font-size: 150%;
     font-weight: bold;
 }
+#Welcome{
+    font-size: 300%;
+    font-weight: bold;
+    position: relative;
+}
 
 input[type=submit]{
     border-color: white;

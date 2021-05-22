@@ -6,8 +6,16 @@ const db = require('../models/db.js');
     when a client requests for a certain path in the server
 */
 const controller = {
+    getFavicon: function (req, res) {
+        res.status(204);
+    },
 
-    
+    getIndex: function (req, res) {
+
+        // render `../views/index.hbs`
+        res.render('index');
+    }
+
 }
 
 /*

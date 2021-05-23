@@ -2,7 +2,7 @@
 const db = require('../models/db.js');
 
 // import module `User` from `../models/UserModel.js`
-const User = require('../models/userModel');
+const User = require('../models/userModel.js');
 
 /*
     defines an object which contains functions executed as callback
@@ -11,20 +11,20 @@ const User = require('../models/userModel');
 const userController = {
 
     getUser: function(req, res) {
-        // var query = {name: req.params.name};
+        var query = {name: req.params.name};
 
-        // var projection = 'name'
+        var projection = 'name'
 
-        // db.findOne(User, query, projection, function(result) {
-        //     if(result != null) {
-        //         var details = {
-        //             name: result.name
-        //         };
-        //     res.render('User', details);
-        //     } else {
-        //         res.render('error404');
-        //     }
-        // });
+        db.findOne(User, query, projection, function(result) {
+            if(result != null) {
+                var details = {
+                    name: result.name
+                };
+            res.render('userprofile', details);
+            } else {
+                res.render('error404');
+            }
+        });
     },
 
     addUser: function(req, res) {

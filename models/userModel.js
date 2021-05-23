@@ -1,10 +1,9 @@
 // import module `mongoose`
-const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 // defines the schema for collection `users`
-const UserSchema = new Schema({
+var UserSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -20,10 +19,10 @@ const UserSchema = new Schema({
     },
     description: {
         type: String
+    },
+    avatar: {
+        type: String 
     }
-    // avatar: {
-    //     type: String 
-    // }
 });
 
 /*
@@ -32,4 +31,4 @@ const UserSchema = new Schema({
     This model executes CRUD operations
     to collection `users` -> plural of the argument `User`
 */
-module.exports = mongoose.model('User', UserSchema);
+module.exports =  mongoose.model('User', UserSchema);

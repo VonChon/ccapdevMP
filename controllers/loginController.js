@@ -2,7 +2,7 @@
 const db = require('../models/db.js');
 
 // import module `User` from `../models/UserModel.js`
-const User = require('../models/UserModel.js');
+const User = require('../models/userModel.js');
 
 /*
     defines an object which contains functions executed as callback

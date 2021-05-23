@@ -12,10 +12,9 @@ const user_controller = require('../controllers/userController.js');
 const app = express();
 
 app.get('/', login_controller.getLogin);
+app.get('/', login_controller.postLogin);
 app.get('/login', login_controller.getLogin);
 app.post('/login', login_controller.postLogin);
-
-
 
 app.get('/signup', signup_controller.getSignUp);
 app.post('/signup', signup_controller.postSignUp);

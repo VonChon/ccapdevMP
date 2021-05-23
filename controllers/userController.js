@@ -10,18 +10,23 @@ const User = require('../models/userModel.js');
 */
 const userController = {
 
-    getUser: function(req, res) {
-        var query = {name: req.params.name};
+    getUser: function (req, res) {
 
-        var projection = 'name'
+        var query = { user_name: req.params.user_name };
 
-        db.findOne(User, query, projection, function(result) {
-            if(result != null) {
+        var projection = '';
+        db.findOne(User, query, projection, function (result) {
+
+            if (result != null) {
                 var details = {
-                    name: result.name
+                    "name": result.name,
+                    "email": result.email,
+                    "description": result.description,
+                    // "image": result.image
                 };
-            res.render('userprofile', details);
-            } else {
+                res.render('userprofile', details);
+            }
+            else {
                 res.render('error404');
             }
         });

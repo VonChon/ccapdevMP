@@ -1,3 +1,6 @@
+// import module `bcrypt`
+const bcrypt = require('bcrypt');
+
 // import module `database` from `../models/db.js`
 const db = require('../models/db.js');
 
@@ -24,23 +27,31 @@ const loginController = {
     */
     postLogin: function (req, res) {
 
-        /*
-            when submitting forms using HTTP POST method
-            the values in the input fields are stored in `req.body` object
-            each <input> element is identified using its `name` attribute
-            Example: the value entered in <input type="text" name="fName">
-            can be retrieved using `req.body.fName`
-        */
-        var name = req.body.name;
         var email = req.body.email;
         var password = req.body.password;
-
-        var user = {
-            name: name,
-            email: email,
-            password: password
-        }
-        res.render('index');
+    
+        db.findOne(User, {email: email}, '', function (result) {
+            if(result) {
+                var user = {
+                    email: result.email,
+                };
+    
+                bcrypt.compare(password, result.password, function(err, equal) {
+                    if(equal)
+                        res.redirect('/userprofile/' + user.email);
+    
+                    else {
+                        var details = {error: `Email and/or Password is incorrect.`}
+                        res.render('login', details);
+                    }
+                });
+            }
+    
+            else {
+                var details = {error: `Email and/or Password is incorrect.`}
+                res.render('login', details);
+            }
+        });
     }
 }
 

@@ -1,13 +1,9 @@
 // import module from `../models/database.js`
-const db = require('../models/database.js');
+const db = require('../models/db.js');
 
 // import ProductSchema from `../models/ProductModel.js`
-const Product = require('../models/ProductModel');
+const Product = require('../models/productModel');
 
-// import module `validationResult` from `express-validator`
-const { validationResult } = require('express-validator');
-
-const defaultCallback = (res, result) => res.status(200).json(result)
 
 const productController = {
   getAllProducts: function (req, res) {

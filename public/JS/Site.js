@@ -111,5 +111,5 @@ function search() {
 }
 
 function goHome(){
-    location.replace("./Site.html");
+    location.replace("/Site");
 }

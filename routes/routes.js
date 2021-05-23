@@ -23,6 +23,7 @@ app.get('/success', success_controller.getSuccess);
 
 app.get('/index', controller.getIndex);
 
+app.get('/Site', function(req, res) {res.redirect('/index');});
 app.get('/userprofile', user_controller.getUser);
 // app.post('/logout', user_controller.logout);
 // app.get('/products/:pname', product_controller.getProduct);

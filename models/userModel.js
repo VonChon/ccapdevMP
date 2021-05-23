@@ -20,7 +20,7 @@ const UserSchema = new Schema({
     },
     description: {
         type: String
-    },
+    }
     // avatar: {
     //     type: String 
     // }

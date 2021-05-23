@@ -20,6 +20,17 @@ body{
     padding: 10px;
     box-shadow: 5px 10px #888888;
 }
+.welc {
+    padding-top: 30%;
+    margin: auto;
+    width: 50%;
+    height: 400px;
+    border-radius: 2%;
+    text-align: center;
+    background:whitesmoke;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+}
 #Log{
     font-size: 150%;
     font-weight: bold;

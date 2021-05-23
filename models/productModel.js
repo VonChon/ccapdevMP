@@ -5,22 +5,14 @@ const { Schema } = mongoose;
 
 // defines the schema for collection `products`
 const ProductSchema = Schema({
-  prod_image: {
-    type: String,
-    required: true
-  },
-  pname: {
+  prodname: {
     type: String,
     required: true,
     unique: true
   },
-  category: {
+  pimage: {
     type: String,
-    required: true
-  },
-  brand: {
-    type: String,
-    required: true
+    required: true,
   },
   price: {
     type: Schema.Types.Decimal128,

@@ -26,21 +26,30 @@ const loginController = {
         as defined in `../routes/routes.js`
     */
     postLogin: function (req, res) {
+        console.log("entered post login")
 
         var email = req.body.email;
+        var name = req.body.name;
         var password = req.body.password;
+
+        var query = { email: email }
     
-        db.findOne(User, {email: email}, '', function (result) {
+        db.findOne(User, query, '', function (result) {
+           
             if(result) {
                 var user = {
                     email: result.email,
+                    name: result.name
                 };
-    
                 bcrypt.compare(password, result.password, function(err, equal) {
-                    if(equal)
-                        res.redirect('/userprofile/' + user.email);
-    
+                    if(equal){
+                        // req.session.name = user.name;
+                        // req.session.email = user.emmail;
+                        res.redirect('/success?name=' + user.name);
+                        
+                    }
                     else {
+                        console.log("Not equal...")
                         var details = {error: `Email and/or Password is incorrect.`}
                         res.render('login', details);
                     }

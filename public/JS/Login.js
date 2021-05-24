@@ -27,10 +27,10 @@
 
 $(document).ready(function() {
     $("#loginbutton").on('click', function () {
-        //  var email =  $("#emailid").val();
-        //  var password = $("#passwordid").val();
         var email = document.getElementById('emailid').value;
         var password = document.getElementById('passwordid').value;
+        
+        console.log(email);
+        console.log(password);
     });
-    console.log("Hello");
 })

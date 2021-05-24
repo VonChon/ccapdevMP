@@ -4,6 +4,13 @@ const db = require('../models/db.js');
 // import module `User` from `../models/UserModel.js`
 const User = require('../models/userModel.js');
 
+// import module `validationResult` from `express-validator`
+const { validationResult } = require('express-validator');
+
+// import module `bcrypt`
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 /*
     defines an object which contains functions executed as callback
     when a client requests for `signup` paths in the server
@@ -24,42 +31,37 @@ const signupController = {
     */
     postSignUp: function (req, res) {
 
-        /*
-            when submitting forms using HTTP POST method
-            the values in the input fields are stored in `req.body` object
-            each <input> element is identified using its `name` attribute
-            Example: the value entered in <input type="text" name="fName">
-            can be retrieved using `req.body.fName`
-        */
-        var email = req.body.email;
-        var name = req.body.name;
-        var password = req.body.password;
+        // checks if there are validation errors
+        var errors = validationResult(req);
 
-        var user = {
-            email: email,
-            name: name,
-            password: password
+        if(!errors.isEmpty()) {
+            errors = errors.errors;
+
+            var details = {};
+            for(i = 0; i < errors.length; i++)
+                details[errors[i].param + 'Error'] = errors[i].msg;
+
+            res.render('/signup', details);
         }
+        else {
+            var email = req.body.email;
+            var name = req.body.name;
+            var password = req.body.password;
 
-        /*
-            calls the function insertOne()
-            defined in the `database` object in `../models/db.js`
-            this function adds a document to collection `users`
-        */
-        db.insertOne(User, user, function(result) {
-            console.log(result);
-            if(result) {
-                /*
-                    upon adding a user to the database,
-                    redirects the client to `/success` using HTTP GET,
-                    defined in `../routes/routes.js`
-                    passing values using URL
-                    which calls getSuccess() method
-                    defined in `./successController.js`
-                */
-                res.redirect('/success?name=' + name);
-            }
-        });
+            bcrypt.hash(password, saltRounds, function(err, hash) {
+                var user = {
+                email: email,
+                name: name,
+                password: hash
+                }
+
+                db.insertOne(User, user, function(flag) {
+                    if(flag) {
+                        res.redirect('/success?name=' + name);
+                    }
+                });
+            });
+        }
     }
 }
 

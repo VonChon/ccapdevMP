@@ -41,7 +41,7 @@ const signupController = {
             for(i = 0; i < errors.length; i++)
                 details[errors[i].param + 'Error'] = errors[i].msg;
 
-            res.render('/signup', details);
+            res.render('signup', details);
         }
         else {
             var email = req.body.email;
@@ -52,7 +52,7 @@ const signupController = {
                 var user = {
                 email: email,
                 name: name,
-                password: hash
+                password: hash,
                 }
 
                 db.insertOne(User, user, function(flag) {
@@ -62,6 +62,28 @@ const signupController = {
                 });
             });
         }
+    }, 
+    
+    getCheckID: function (req, res) {
+
+        /*
+            when passing values using HTTP GET method
+            the values are stored in `req.query` object
+            Example url: `http://localhost/getCheckID?idNum=11312345`
+            To retrieve the value of parameter `idNum`: `req.query.idNum`
+        */
+        var idNum = req.query.idNum;
+
+        /*
+            calls the function findOne()
+            defined in the `database` object in `../models/db.js`
+            searches for a single document based on the model `User`
+            sends an empty string to the user if there are no match
+            otherwise, sends an object containing the `idNum`
+        */
+        db.findOne(User, {idNum: idNum}, 'idNum', function (result) {
+            res.send(result);
+        });
     }
 }
 

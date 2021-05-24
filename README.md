@@ -32,6 +32,6 @@ After cloning or installing the files and extracting it, do the following:
 - Check Products
 
 ## Author(s)
-- ![Nathan Von Rodriguez](https://github.com/VonChon)
-- ![Junedel de Leon](https://github.com/xManticor)
-- ![Junedel de Leon](https://github.com/jdleon5)
+- [Nathan Von Rodriguez](https://github.com/VonChon)
+- [Junedel de Leon](https://github.com/xManticor)
+- [Junedel de Leon](https://github.com/jdleon5)

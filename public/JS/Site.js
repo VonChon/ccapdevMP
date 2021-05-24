@@ -109,7 +109,3 @@ function search() {
         alert("Search not found!");
     }
 }
-
-function goHome(){
-    location.replace("./Site.html");
-}

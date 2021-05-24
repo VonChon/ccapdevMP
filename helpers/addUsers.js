@@ -1,7 +1,6 @@
-// import module from `./models/db.js`
-const db = require('./models/db.js');
-const User = require('./models/userModel');
-const collection = 'userprofiles'
+// import module from `../models/db.js`
+const db = require('../models/db.js');
+const User = require('../models/userModel');
 
 db.connect();
 

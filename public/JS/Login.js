@@ -31,10 +31,6 @@ $(document).ready(function() {
         //  var password = $("#passwordid").val();
         var email = document.getElementById('emailid').value;
         var password = document.getElementById('passwordid').value;
-       });
+    });
     console.log("Hello");
 })
-
-
-
-

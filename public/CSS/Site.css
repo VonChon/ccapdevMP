@@ -60,8 +60,16 @@ img{
     border-color: rgb(190, 245, 245);
     padding: 20px;
     background-color: rgb(255, 253, 253);
+    color: #000;
+    text-decoration: none;
     text-align: center;
     margin: 10px;
+}
+
+.items:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
 }
 
 .checked{

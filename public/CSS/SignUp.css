@@ -27,7 +27,7 @@ body{
 
 input[type=submit]{
     border-color: white;
-    width: 20%;
-    height: 20%;
+    width: 100px;
+    height: 25px;
     background-color: rgba(4, 190, 66, 0.795);
 }

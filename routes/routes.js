@@ -6,13 +6,13 @@ const controller = require('../controllers/controller.js');
 const login_controller = require('../controllers/loginController.js');
 const signup_controller = require('../controllers/signupController.js');
 const success_controller = require('../controllers/successController.js');
-// const product_controller = require('../controllers/productController.js');
+const product_controller = require('../controllers/productController.js');
 const user_controller = require('../controllers/userController.js');
 
 const app = express();
 
-app.get('/', login_controller.getLogin);
-app.get('/', login_controller.postLogin);
+app.get('/', controller.getIndex);
+
 app.get('/login', login_controller.getLogin);
 app.post('/login', login_controller.postLogin);
 
@@ -21,10 +21,12 @@ app.post('/signup', signup_controller.postSignUp);
 
 app.get('/success', success_controller.getSuccess);
 
-app.get('/index', controller.getIndex);
-
 app.get('/userprofile', user_controller.getUser);
+
 // app.post('/logout', user_controller.logout);
-// app.get('/products/:pname', product_controller.getProduct);
+
+app.get('/products', product_controller.getAllProducts);
+
+app.get('/products/:pname', product_controller.getProduct);
 
 module.exports = app;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike Fly.By Mid</title>
+    <title>{{prodname}}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -24,17 +24,12 @@
     <div class = "main-page">
         <div class = "top-header">
             <div class = "logo">
-                    <img src="../Photos/Logo.png" id = "logo">
+                {{!-- Placeholder image to go back HOME --}}
+                <a href="/"><img src="../Photos/Logo.png" id = "logo"></a>
             </div>
            
             <div class="input-group">
-                <button type="button" class="btn btn-secondary" id = "home-button" onclick="/index">Home</button>
-                <!-- <input type="text" class="form-control" placeholder="Search for products and brands" name="search" id = "search">
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-outline-dark" onclick="search();">Search</button>
-                </div> -->
             </div>
-                
         
             <div>
                 <div class="dropdown">
@@ -56,36 +51,38 @@
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="../Photos/Nike-FlyBy-Mid-2090.jpg" /></div>
-						  <div class="tab-pane" id="pic-2"><img src="../Photos/flyby/front.png" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="../Photos/flyby/top.png" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="../Photos/flyby/back.png" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="../Photos/flyby/sole.png" /></div>
+                            <div class="tab-pane active" id="pic-main" ><img src="../Photos/{{mainimage}}" /></div>
+                            {{#each pimages}}
+                                <div class="tab-pane" id="pic-{{@index}}" ><img src="../Photos/{{this}}" /></div>
+                            {{/each}}
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../Photos/Nike-FlyBy-Mid-2090.jpg" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="../Photos/flyby/front.png" /></a></li>
-						  <li><a data-target="#pic-3" data-toggle="tab"><img src="../Photos/flyby/top.png" /></a></li>
-						  <li><a data-target="#pic-4" data-toggle="tab"><img src="../Photos/flyby/back.png" /></a></li>
-						  <li><a data-target="#pic-5" data-toggle="tab"><img src="../Photos/flyby/sole.png" /></a></li>
+                            <li class="active"><a data-target="#pic-main" data-toggle="tab"><img src="../Photos/{{mainimage}}" /></a></li>
+                            {{#each pimages}}
+                                <li><a data-target="#pic-{{@index}}" data-toggle="tab"><img src="../Photos/{{this}}" /></a></li>
+                            {{/each}}
 						</ul>
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">Nike Fly.By Mid {{productname}}</h3>
+						<h3 class="product-title">{{prodname}}</h3>
                         <img src="../Photos/fire.png" width="35"><span class="state">HOT!</span>
-						<p class="product-description"><br>GRITTY GAME.<br><br>
-                            Players who go all out, every play, in every game deserve something special for their effort. The Nike Fly.By Mid provides court-ready cushioning, support and traction for the game's constant multi-directional movements.
-                            <br><br>Secure, Supportive Fit
-                            <br>Mid-high design with plush, foam-lined collar has a secure fit and support around your ankle.
-                            <br><br>Custom Lacing
-                            <br>Stitched-down leather overlay provides durability and side-to-side support. Multiple lace feeds in each section let you customise how you lace up.
-                            <br>Court Control
-                            <br><br>Durable rubber outsole with wavy traction pattern provides great grip on the court.
-                            </p>
+						<p class="product-description">
+                            {{description}}
+                        </p>
 						<div class="product_meta">
-                            <span class="posted_in"> <strong>CATEGORIES:</strong> <a rel="tag" href="#">Shoes</a>, <a rel="tag" href="#">Men</a></span>
+                            <span class="posted_in"> 
+                                <strong>CATEGORIES:</strong> 
+                                {{#each categories}}
+                                    <a rel="tag" href="#">{{this}}</a>, 
+                                {{/each}}
+                            </span>
                         </div>
-                        <h4 class="price">price: <span class="amount-old">₱2,895</span><span class="amount-new"> ₱2,090</span></h4>
+                        <h4 class="price">price: 
+                            {{#if onlyOnePrice}}
+                                <span class="amount-new">₱{{priceNow}}</span>
+                            {{else}}
+                                <span class="amount-old">₱{{priceBefore}}</span> <span class="amount-new">₱{{priceNow}}</span></h4>
+                            {{/if}}
 						<p class="vote">Buyers enjoyed this product!</p>
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button" onclick="alert('Product added to cart!')">add to cart</button>
@@ -95,13 +92,9 @@
                 <div class="product-drescription">
                     <br><p><u>Product Details</u></p>
                     <ul>
-                        <li>Breathable mesh tongue</li>
-                        <li>Resilient foam midsole</li>
-                        <li>Tight mesh in the forefoot</li>
-                        <li>Leather and textile materials in upper</li>
-                        <li>Colour Shown: Wolf Grey/Pure Platinum/Metallic Silver/Cool Grey</li>
-                        <li>Style: CD0189-013</li>
-                        <li>Country/Region of Origin: India</li>
+                        {{#each details}}
+                            <li>{{this}}</li>
+                        {{/each}}
                     </ul>
                 </div> 
                 <hr>

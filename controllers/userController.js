@@ -60,7 +60,7 @@ const userController = {
             description: req.body.description,
             //avatar: req.body.avatar
         };
-        db.updateOne(User, { name : req.body.name }, user, (result) => {
+        db.updateOne(User, { name : req.body.name }, user, function(result) {
             if(result) {
               res.status(200);
               res.render('User', user);

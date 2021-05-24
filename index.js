@@ -1,8 +1,8 @@
 // import module `express`
 const express = require('express');
 
-// import module `express-handlebars`
-const exphbs = require('express-handlebars');
+// import module `hbs`
+const hbs = require('hbs');
 
 const routes = require('./routes/routes.js');
 
@@ -15,7 +15,9 @@ const port = 3000;
 
 // set `hbs` as view engine
 app.set('view engine', 'hbs');
-app.engine('hbs', exphbs({extname: 'hbs'}));
+
+// sets `/views/partials` as folder containing partial hbs files
+hbs.registerPartials(__dirname + '/views/partials');
 
 // set the folder `public` as folder containing static assets
 // such as css, js, and image files
@@ -39,22 +41,3 @@ app.use(function (req, res) {
 });
 
 db.connect();
-
-// app.get('/', function(req, res) {
-//     res.render('login');
-// });
-
-// app.get('/Site.html', function(req, res) {
-//     res.render('index');
-// });
-
-// app.get('/SignUp.html', function(req, res) {
-//     res.render('signup');
-// });
-// app.post('/SignUp.html', function(req, res) {
-//     res.render('signup');
-// })
-
-// app.post('/Login.html', function(req, res) {
-//     res.render('login');
-// });

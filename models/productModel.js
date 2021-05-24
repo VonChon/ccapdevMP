@@ -10,17 +10,26 @@ const ProductSchema = Schema({
     required: true,
     unique: true
   },
-  pimage: {
-    type: String,
-    required: true,
+  pimages: {
+    type: [String],
   },
-  price: {
+  categories: {
+    type: [String]
+  },
+  priceBefore: {
+    type: Schema.Types.Decimal128,
+    required: true
+  },
+  priceNow: {
     type: Schema.Types.Decimal128,
     required: true
   },
   description: {
     type: String,
     required: true
+  },
+  details: {
+      type: [String]
   },
   reviews: {
     type: [],

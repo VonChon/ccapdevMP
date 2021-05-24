@@ -27,6 +27,12 @@ app.get('/userprofile', user_controller.getUser);
 
 app.get('/products/login', function(req, res){res.redirect('/login')});
 
+app.get('/products/userprofile', function(req, res){res.redirect('/userprofile')});
+
+app.get('/products/Cart', function(req, res){res.render('error404')});
+
+app.get('/products/login', function(req, res){res.redirect('/login')});
+
 app.get('/products', product_controller.getAllProducts);
 
 app.get('/products/:pname', product_controller.getProduct);

@@ -108,4 +108,12 @@ function search() {
     {
         alert("Search not found!");
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+function goHome(){
+    location.replace("/Site");
+}
+>>>>>>> 84b94f4eae600cc5ee302e8adaf88994b244fa09

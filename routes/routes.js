@@ -21,12 +21,6 @@ app.post('/signup', signup_controller.postSignUp);
 
 app.get('/success', success_controller.getSuccess);
 
-<<<<<<< HEAD
-=======
-app.get('/index', controller.getIndex);
-
-app.get('/Site', function(req, res) {res.redirect('/index');});
->>>>>>> 84b94f4eae600cc5ee302e8adaf88994b244fa09
 app.get('/userprofile', user_controller.getUser);
 
 // app.post('/logout', user_controller.logout);

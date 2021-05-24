@@ -32,8 +32,10 @@ const ProductSchema = Schema({
       type: [String]
   },
   reviews: {
-    type: [],
-    required: true
+    type: []
+  },
+  comments: {
+    type: []
   }
 });
 

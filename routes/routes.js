@@ -25,6 +25,8 @@ app.get('/userprofile', user_controller.getUser);
 
 // app.post('/logout', user_controller.logout);
 
+app.get('/products/login', function(req, res){res.redirect('/login')});
+
 app.get('/products', product_controller.getAllProducts);
 
 app.get('/products/:pname', product_controller.getProduct);
